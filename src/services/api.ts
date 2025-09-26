@@ -1,12 +1,10 @@
 import axios from "axios";
 
-let bearerToken =
-  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyY2Y3YzMxMmVhYzRjMTE4NzFmOGY0N2NmN2JjOWRmNSIsIm5iZiI6MTU3OTAwODU3MC41NTksInN1YiI6IjVlMWRjMjNhYTI0YzUwMDAxMzBiZTZjNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.23p3_LsFv9KwwKKgSvw0oGzJSTFrhSpgwtL6Q13U9P8";
-
+let bearerToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjMThjNzczZjczMmJlNmI3ZGFhZTllMWZlYTZjNzgxYiIsIm5iZiI6MTc1ODI2NDgwNy4xMjcsInN1YiI6IjY4Y2NmZGU3YzRhNjJmMDljYmNmNGIyMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UMoGtDXOFt-f_yKjVqAaLZyZZtiHtm9tIAnQ2k0c9Bw"
 const API = axios.create();
 
 export const setAxiosConfig = (token: string) => {
-  bearerToken = token;
+  // bearerToken = token;
 };
 
 API.interceptors.request.use((axiosConfig) => {
