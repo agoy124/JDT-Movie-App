@@ -8,7 +8,7 @@ import { getMovieDetail } from "../../services/moviedetail/api";
 import type { MovieDetail } from "../../services/moviedetail/type";
 
 const HomeScreen = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { popularMovie } = usePopularMovie();
   const { upcomingMovie } = useUpcoming();
 

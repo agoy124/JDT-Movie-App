@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import type { MovieUpcoming } from '../../services/upcoming/type'
 import Card from '../card'
 

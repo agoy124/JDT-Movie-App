@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useMovieDetail from "../../hooks/movie/useMovieDetail";
 import MovieComponent from "../../components/movie";
