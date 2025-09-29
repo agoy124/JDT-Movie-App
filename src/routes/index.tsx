@@ -2,35 +2,24 @@ import { createBrowserRouter } from "react-router";
 import HomeScreen from "../features/home";
 import DetailScreen from "../features/detail";
 import Layout from "../components/layout";
-import Login from "../features/login";
-import ProtectedRoutes from "./ProtectedRoutes";
 import ProductScreen from "../features/product";
 
 export const routes = createBrowserRouter([
   {
-    element: <ProtectedRoutes />,
+    path: "/",
+    element: <Layout />,
     children: [
       {
-        path: "/login",
-        element: <Login />,
+        element: <HomeScreen />,
+        index: true,
       },
       {
-        path: "/",
-        element: <Layout />,
-        children: [
-          {
-            element: <HomeScreen />,
-            index: true,
-          },
-          {
-            element: <DetailScreen />,
-            path: "/detail/:id",
-          },
-          {
-            element: <ProductScreen />,
-            path: "/product",
-          },
-        ],
+        path: "/detail/:id",
+        element: <DetailScreen />,
+      },
+      {
+        path: "/product",
+        element: <ProductScreen />,
       },
     ],
   },
